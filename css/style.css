@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
+*{
+    box-sizing: border-box;
+    font-family: 'poppins-bold', sans-serif !important;
+    
+}
+
+
+header > h1 {
+    text-align: center;
+}
+.partebranca{
+   background-color: rgb(255, 255, 255);
+   padding-left: 50px;
+   padding-top: 25px;
+   width: 600px;
+   height: 600px;
+   position: absolute;
+   top: 50%;
+   left: 40%;
+   transform: translate(-50%, -50%);
+   box-shadow: -9px 8px 14px 0px rgba(168, 168, 168, 0.404);
+  
+   
+}
+form{
+    gap: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+
+
+#pessoal{
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    
+}
+#assunto{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    gap: 20px;
+}
+.name , .email{
+    padding: 10px;
+    width: 240px;
+    border-radius: 5px; 
+    border-width: 1px;
+    border-color: rgba(128, 128, 128, 0.281);
+    
+    
+}
+
+
+
+.subject{
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: rgba(128, 128, 128, 0.281);
+   
+}
+
+#button{
+    font-size: 14px;
+    width: 120px;
+    height: 40px;
+    background-color: rgb(64, 119, 240);
+    color: white;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+#textarea{
+    
+    width: 100%;
+    padding: 10px;
+    border: 1px solid  rgba(128, 128, 128, 0.281);
+    border-radius: 5px;
+    font-size: 14px;
+    height: 200px;
+    
+}
+.parteazul{
+    background-color: #3D89F7;
+    color: rgb(255, 255, 255);
+    padding-left: 50px;
+    width: 500px;
+    height: 650px;
+    position: absolute;
+    top: 50%;
+    left: 57%;
+    transform: translate(+50%, -50%);
+    border-radius: 5px;
+}
+.parteazul > h2{
+    margin-top: 70px;
+}
+.icones{
+    margin-left: 30px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    
+}
+
+#ico1 > i, #ico2 > i, #ico3> i, #ico4 > i{
+    font-size: 30px;
+    margin-right: 20px;
+}
+#span{
+    font-size: 15px;
+}
+#ico1, #ico2, #ico3, #ico4{
+    display: flex;
+    align-items: center;
+}
