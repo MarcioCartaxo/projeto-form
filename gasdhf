@@ -1,0 +1,33 @@
+let nome;
+
+// Verifica se a página atual é a página inicial (index.html)
+if (window.location.pathname.includes("index.html")) {
+    
+    document.getElementById("button").addEventListener("click" , function(){
+        
+        addloading();
+        
+            
+       
+        nome = document.getElementById("nome").value;
+        localStorage.setItem("nome", nome);
+    });
+}
+
+// Verifica se a página atual é a página "obrigado.html"
+if (window.location.pathname.includes("obrigado.html")) {
+    nome = localStorage.getItem("nome");
+    if (nome) {
+        document.getElementById("home").innerHTML = "Obrigado " + nome + " seu feedback já foi enviado.";
+    }
+}
+
+
+const addloading = () => {
+   
+    const button = document.querySelector('button');
+    button.innerHTML = ' <img class="loading" src="img/loading-arrow.png"> ';
+    setTimeout(() => {
+        window.location.href = "obrigado.html";
+    }, 2000);
+}

@@ -7,23 +7,26 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
     <title>Form</title>
 </head>
-<body>
+<body style="background-color: red;">
     <header>
         <h1 id="home"></h1>
     </header>
     <main>
-     <div class="partebranca">
+     <div  class="partebranca">
         <h2>Get in touch</h2>
-        <form method="post">
+        <form action="https://api.sheetmonkey.io/form/jbMnutDA8ck1U3AF46YAEB" method="post">
             <div id="pessoal">
-                <input id="nome" type="text" class="name" placeholder="Name" required>
-                <input type="email" class="email" placeholder="Email" required>
+                <input id="nome" type="text" class="name" placeholder="Name" name="nome" required>
+                <input type="email" class="email" placeholder="Email" name="email">
             </div>
             <div id="assunto">
-                <input type="text" class="subject" placeholder="Subject" required>
-                <textarea name="" id="textarea" placeholder="Message"></textarea >
+                <input type="text" class="subject" placeholder="Subject" name="assunto">
+                <textarea name="textarea" id="textarea" placeholder="Message"></textarea >
             </div>
-            <button id="button">Send Message</button>
+            <button id="button">
+                Enviar
+            </button>
+            
         </form>
      <div class="parteazul">
          <h2>Contact us</h2>

@@ -1,19 +1,37 @@
-let nome;
 
-// Verifica se a página atual é a página inicial (index.html)
-if (window.location.pathname.includes("index.html")) {
-    document.getElementById("button").addEventListener("click" , function(event){
-        event.preventDefault(); // Evitar o comportamento padrão do formulário
-        nome = document.getElementById("nome").value;
-        localStorage.setItem("nome", nome);
-        window.location.href = "obrigado.html";
+
+
+const handlesubmit = (event) => {
+
+    addloading();
+
+    event.preventDefault(); 
+    const name = document.querySelector('input[name=nome]').value;
+    const email = document.querySelector('input[name=email]').value;
+    fetch('https://api.sheetmonkey.io/form/jbMnutDA8ck1U3AF46YAEB', {
+
+        method: 'post' ,
+        headers : {
+            'Accept': 'application/json',
+             'Content-Type': 'application/json',
+        },
+            body: JSON.stringify({ name , email }),
+
     });
+
 }
 
-// Verifica se a página atual é a página "obrigado.html"
-if (window.location.pathname.includes("obrigado.html")) {
-    nome = localStorage.getItem("nome");
-    if (nome) {
-        document.getElementById("home").innerHTML = "Obrigado " + nome + " seu feedback já foi enviado.";
-    }
+document.querySelector('form').addEventListener('submit' , handlesubmit);
+
+
+
+
+
+const addloading = () => {
+   
+    const button = document.querySelector('button');
+    button.innerHTML = ' <img class="loading" src="img/loading-arrow.png"> ';
+    setTimeout(() => {
+        window.location.href = "obrigado.html";
+    }, 2000);
 }
